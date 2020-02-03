@@ -1,0 +1,12 @@
+{
+  "name": "js-router",
+  "version": "1.0.0",
+  "description": "JS Vanilla Router",
+  "main": "index.js",
+  "author": "@FiliSantillan",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server-spa": "^1.3.0"
+  },
+  "dependencies": {}
+}
