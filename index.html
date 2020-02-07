@@ -3,33 +3,44 @@
   <head>
     <title>JS Router</title>
 
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   </head>
   <body>
-    <header class="header">
-      <ul class="header__list">
-        <li class="header__item">
-          <button onclick="router.loadRoute('')" class="header__button">
+
+   <div class="app">
+      <header class="header">
+      <h1 class="header-title">
+        JS Vanilla Router
+      </h1>
+
+      <ul class="header-list">
+        <li class="header-item">
+          <button onclick="router.loadRoute('')" class="header-button">
             Home
           </button>
         </li>
-        <li class="header__item">
-          <button onclick="router.loadRoute('aboutme')" class="header__button">
+        <li class="header-item">
+          <button onclick="router.loadRoute('aboutme')" class="header-button">
             About me
           </button>
         </li>
-        <li class="header__item">
-          <button onclick="router.loadRoute('contact')" class="header__button">
+        <li class="header-item">
+          <button onclick="router.loadRoute('contact')" class="header-button">
             Contact
           </button>
         </li>
       </ul>
     </header>
 
-    <div class="container" data-router>
-    </div>
+    <section class="container" data-router>
+    </section>
+    
+   </div>
 
     <script src="./router.js"></script>
     <script src="./routes.js"></script>
