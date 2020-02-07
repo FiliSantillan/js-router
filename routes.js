@@ -1,14 +1,20 @@
 const routes = [
   {
     path: "/",
-    template: "<h1>Hola</h1>"
+    image: "./image.jpg",
+    title: "<h1>¡Bienvenido!</h1>",
+    template: "<p>Hola</p>"
   },
   {
     path: "/aboutme",
-    template: "<h1>About me</h1>"
+    image: "./image.jpg",
+    title: "<h1>About me</h1>",
+    template: "<p>About me</p>"
   },
   {
     path: "/contact",
-    template: "<h1>Contact</h1>"
+    image: "./image.jpg",
+    title: "<h1>About me</h1>",
+    template: "<p>About me</p>"
   }
 ];

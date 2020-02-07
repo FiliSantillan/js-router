@@ -11,8 +11,26 @@ class Router {
 
     history.pushState({}, "this works", url);
 
-    const routerOutElement = document.querySelectorAll("[data-router]")[0];
-    routerOutElement.innerHTML = matchedRoute.template;
+    const element = _createStructure(matchedRoute);
+
+    const routerOutElement = document.querySelector("[data-router]");
+    routerOutElement.innerHTML = element;
+  }
+
+  _createStructure(dataRoute) {
+
+    const { image, title, template } = dataRoute;
+
+    return `
+    <figure class="container-image">
+      <img src="${image}" alt="" class="container-img">
+    </figure>
+
+    <div class="container-template">
+      <h2>${title}</h2>
+      <p>${template}</p>
+    </div>
+    `
   }
 
   _matchUrlToRoute(urlSegs) {
