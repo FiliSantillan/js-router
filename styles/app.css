@@ -2,7 +2,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,16 +17,17 @@ p {
   font-size: 0.9rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
 button {
-  background: #FFD166;
+  background: #ffd166;
   padding: 10px 20px;
   border-radius: 5px;
-  box-shadow: 0 3px 0 #363A4B;
+  box-shadow: 0 3px 0 #363a4b;
   border: none;
   outline: 0;
   transition: 0.3s;
@@ -38,8 +39,12 @@ button:hover {
 }
 
 button:active {
-  box-shadow: 0 0 0 #363A4B;
+  box-shadow: 0 0 0 #363a4b;
   scale: 0.9;
+}
+
+a {
+  color: black;
 }
 
 .header {
@@ -50,7 +55,7 @@ button:active {
   margin-bottom: 30px;
 }
 
-.header-title {
+.header .header-title {
   font-size: 2.5em;
   text-transform: uppercase;
   width: 100%;
@@ -63,31 +68,57 @@ button:active {
   display: flex;
 }
 
-.header-item {
+.header .header-item {
   margin-right: 15px;
 }
 
 .container {
   display: flex;
-  border-radius: 20px;
-  background: #F2F2F2;
-  max-width: 800px;
-  box-shadow: 8px 8px 10px rgba(0,0,0,0.4);
+  flex-wrap: wrap;
+  background: #f2f2f2;
+  margin-bottom: 1rem;
 }
 
-.container-image {
-  width: 40%;
-  height: 400px;
+.container .container-image {
+  width: 100%;
+  height: 200px;
 }
 
-.container-img {
+.container .container-image .container-img {
   width: 100%;
   height: 100%;
-  border-radius: 20px 0 0 20px;
   object-fit: cover;
 }
 
-.container-template {
-  max-width: calc(100% - (40% + 60px));
+.container .container-template {
+  width: 100%;
   padding: 30px;
+}
+
+.social {
+  text-align: center;
+}
+
+.social a {
+  margin-left: 1rem;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    border-radius: 20px;
+    max-width: 750px;
+  }
+
+  .container .container-image {
+    width: 40%;
+    height: 400px;
+  }
+
+  .container .container-image .container-img {
+    border-radius: 20px 0 0 20px;
+  }
+
+  .container .container-template {
+    max-width: calc(100% - (40% + 60px));
+  }
 }

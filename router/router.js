@@ -18,7 +18,6 @@ class Router {
   }
 
   _createStructure(dataRoute) {
-
     const { image, title, template } = dataRoute;
 
     return `
@@ -30,22 +29,21 @@ class Router {
       <h2>${title}</h2>
       <p>${template}</p>
     </div>
-    `
+    `;
   }
 
   _matchUrlToRoute(urlSegs) {
-    const matchedRoute = this.routes.find(route => {
+    const matchedRoute = this.routes.find((route) => {
       const routePathSegs = route.path.split("/").slice(1);
 
-      if(routePathSegs.length !== urlSegs.length) {
+      if (routePathSegs.length !== urlSegs.length) {
         return false;
       }
 
-      return routePathSegs
-        .every((routePathSeg, i) => routePathSeg === urlSegs[i]);
-
-      
-    })
+      return routePathSegs.every(
+        (routePathSeg, i) => routePathSeg === urlSegs[i]
+      );
+    });
 
     return matchedRoute;
   }
@@ -56,5 +54,4 @@ class Router {
 
     this.loadRoute(...pathSegs);
   }
-
 }

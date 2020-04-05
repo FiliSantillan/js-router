@@ -3,47 +3,69 @@
   <head>
     <title>JS Router</title>
 
-    <link rel="stylesheet" href="app.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap"
+      rel="stylesheet"
+    />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   </head>
   <body>
-
-   <div class="app">
+    <div class="app">
       <header class="header">
-      <h1 class="header-title">
-        JS Vanilla Router
-      </h1>
+        <h1 class="header-title">
+          JS Vanilla Router
+        </h1>
 
-      <ul class="header-list">
-        <li class="header-item">
-          <button onclick="router.loadRoute('')" class="header-button">
-            Home
-          </button>
-        </li>
-        <li class="header-item">
-          <button onclick="router.loadRoute('aboutme')" class="header-button">
-            About me
-          </button>
-        </li>
-        <li class="header-item">
-          <button onclick="router.loadRoute('contact')" class="header-button">
-            Contact
-          </button>
-        </li>
-      </ul>
-    </header>
+        <ul class="header-list">
+          <li class="header-item">
+            <button onclick="router.loadRoute('')" class="header-button">
+              Home
+            </button>
+          </li>
+          <li class="header-item">
+            <button onclick="router.loadRoute('aboutme')" class="header-button">
+              About me
+            </button>
+          </li>
+          <li class="header-item">
+            <button onclick="router.loadRoute('contact')" class="header-button">
+              Contact
+            </button>
+          </li>
+        </ul>
+      </header>
 
-    <section class="container" data-router>
-    </section>
-    
-   </div>
+      <section class="container" data-router></section>
 
-    <script src="./router.js"></script>
-    <script src="./routes.js"></script>
-    <script src="./app.js"></script>
+      <div class="social">
+        <a
+          href="https://www.instagram.com/fili.santillan/"
+          target="_blank"
+          rel="”noopener”"
+          >Instagram</a
+        >
+        <a
+          href="https://twitter.com/FiliSantillan"
+          target="_blank"
+          rel="”noopener”"
+          >Twitter</a
+        >
+        <a
+          href="https://www.facebook.com/FiliSantillan96"
+          target="_blank"
+          rel="”noopener”"
+          >Facebook</a
+        >
+      </div>
+    </div>
+
+    <script src="./router/router.js"></script>
+    <script src="./router/routes.js"></script>
+    <script src="./router/app.js"></script>
   </body>
 </html>
